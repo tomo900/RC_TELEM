@@ -1,0 +1,22 @@
+# Ignore build output
+build/
+# Ignore IDE and OS files
+*.swp
+*.swo
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+# Ignore CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+# Ignore SDK configs
+sdkconfig
+sdkconfig.*
+# Ignore managed components
+managed_components/
