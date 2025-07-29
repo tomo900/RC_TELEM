@@ -1,0 +1,2 @@
+source E:/RC_Buggy_Telem/RC_TELEM/build/bootloader/gdbinit/symbols
+source E:/RC_Buggy_Telem/RC_TELEM/build/bootloader/gdbinit/connect
