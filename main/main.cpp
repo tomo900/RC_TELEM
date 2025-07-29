@@ -14,7 +14,7 @@
 #include "led_strip.h"
 #include "sdkconfig.h"
 #include "LED.h"
-
+#include "LSMDS33.h"
 
 
 extern "C" void app_main(void)
@@ -22,15 +22,13 @@ extern "C" void app_main(void)
     char test[] = "test";
     
     LED led(test);
-    
-
+    LSMDS33 imu(0x6A, (gpio_num_t)48, (gpio_num_t)47); // Example I2C address and GPIOs
+    imu.Configure(); // Configure the IMU sensor
     while (1) {
-        
-        led.print_Name();
-        uint8_t div =10;
-        led.set_Color(255/div, 0, 100/div); // Set color to red
-        vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
-        led.set_Color(0, 0, 0); // Set color to red
-        vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
+        int16_t ax, ay, az, gx, gy, gz;
+        imu.read_accGyro_values(&ax, &ay, &az, &gx, &gy, &gz);
+        ESP_LOGI("IMU", "Accel: ax=%d ay=%d az=%d | Gyro: gx=%d gy=%d gz=%d", ax, ay, az, gx, gy, gz);
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+
     }
 }

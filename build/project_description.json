@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "RC_TELEM",
-    "project_version":    "1",
+    "project_version":    "fda1446-dirty",
     "project_path":       "E:/RC_Buggy_Telem/RC_TELEM",
     "idf_path":           "E:/esp-idf/v5.4.1/esp-idf",
     "build_dir":          "E:/RC_Buggy_Telem/RC_TELEM/build",
@@ -1210,7 +1210,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__led_strip" ],
             "file": "E:/RC_Buggy_Telem/RC_TELEM/build/esp-idf/main/libmain.a",
-            "sources": [ "E:/RC_Buggy_Telem/RC_TELEM/main/main.cpp", "E:/RC_Buggy_Telem/RC_TELEM/main/LED.cpp" ],
+            "sources": [ "E:/RC_Buggy_Telem/RC_TELEM/main/LSMDS33.cpp", "E:/RC_Buggy_Telem/RC_TELEM/main/main.cpp", "E:/RC_Buggy_Telem/RC_TELEM/main/LED.cpp", "E:/RC_Buggy_Telem/RC_TELEM/main/LSMDS33.h" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
